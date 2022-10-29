@@ -14,3 +14,44 @@ cities = [['Кабул', 'Исламабад', 'Багдад'], ['4 млн. че
 
 print(f'Население {cities[0][1]} - {cities[1][1]}.')
 print(f'Итого размер населения - {cities[0][0]}а, {cities[0][1]}а, {cities[0][2]}а человек - 21 млн. чел.')
+
+# Вы решили так создать список) хорошо)
+# Это корректно, но в задаче немного подразумевалось иное
+
+# Такой список запишем в town_population
+
+towns = ['Москва', 'Санкт-Петербург', 'Сочи', 'Владивосток']
+
+town_population = [
+    ['Москва', 17000000], 
+    ['Санкт-Петербург', 5400000], 
+    ['Сочи', 500000], 
+    ['Владивосток', 600000]
+]
+
+
+# Решение 1 через функцию с циклом for 
+def total_sum(lst):
+    num_lst = []
+    
+    for i in lst:
+        population = i[1]
+        num_lst.append(population)
+    
+    sum_lst = sum(num_lst)
+    
+    return sum_lst
+
+population_sum_1 = total_sum(town_population)
+
+
+# Решение 2 с суммой результатов индексации
+population_sum_2 = town_population[0][1] +  town_population[1][1] + town_population[2][1] + town_population[3][1]
+
+
+# Вывод на консоль ответов
+print('Население Москвы -', town_population[0][1], 'человек')
+
+print('Итого размер населения -', population_sum_1, 'человек')
+
+print('Итого размер населения -', population_sum_2, 'человек (решение через for)')
