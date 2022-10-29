@@ -22,6 +22,12 @@ for value in my_favorite_songs.values():
     random.shuffle(ran_m)
 print(f'Три песни звучат {sum(ran_m[0:3])}')
 
+# Отлично!
+# Я сделал например так
+time = 0
+for song in sample(tuple(my_favorite_songs), 3):
+    print(song)
+    time += my_favorite_songs[song]
 
-
+print(f'Три песни звучат {round(time, 2)}')
 
