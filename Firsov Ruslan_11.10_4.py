@@ -27,3 +27,4 @@ for x in my_favorite_songs:
 print(f'Три песни звучат {sum(ran_m[0:3])}')
 
 
+# Отлично! Можно и через choices() и через sample() и через randint()
